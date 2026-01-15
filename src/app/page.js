@@ -12,10 +12,16 @@ export default function Home() {
     <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
       <Navbar />
       <main>
-        <Hero />
+        <section id="home">
+          <Hero />
+        </section>
         <Features />
-        <About />
-        <Services />
+        <section id="about">
+          <About />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
         <Testimonials />
         <Newsletter />
       </main>

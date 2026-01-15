@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="p-1.5 bg-primary rounded-md text-white">
               <span className="material-symbols-outlined text-xl">layers</span>
             </div>
-            <h2 className="text-xl font-bold tracking-tight text-primary dark:text-white">ModernApp</h2>
+            <h2 className="text-xl font-bold tracking-tight text-primary dark:text-white">ProductZone</h2>
           </div>
           <p className="text-slate-500 max-w-sm leading-relaxed">
             Designing the future of digital management with a focus on simplicity, elegance, and performance.
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-[1200px] mx-auto px-6 mt-20 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-400 text-xs uppercase tracking-widest font-bold">
-        <p>© 2024 ModernApp. All rights reserved.</p>
+        <p>© 2024 ProductZone. All rights reserved.</p>
         <div className="flex gap-8">
           <a className="hover:text-primary" href="#">Privacy Policy</a>
           <a className="hover:text-primary" href="#">Terms of Service</a>
