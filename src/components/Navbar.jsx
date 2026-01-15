@@ -7,6 +7,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/contexts/AuthContext';
 import toast from 'react-hot-toast';
+import Logo from '@/components/Logo';
 
 export default function Navbar() {
   const { user } = useAuth();
@@ -56,11 +57,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
       <div className="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="p-2 bg-primary rounded-lg text-white">
-            <span className="material-symbols-outlined text-2xl">layers</span>
-          </div>
-          <h2 className="text-xl font-bold tracking-tight text-primary dark:text-white">ProductZone</h2>
+        <Link href="/" className="hover:opacity-80 transition-opacity">
+          <Logo className="w-10 h-10" textClassName="text-xl" />
         </Link>
         <nav className="hidden md:flex items-center gap-10">
           <a className="text-sm font-semibold hover:text-primary transition-colors" href="/#home">Home</a>

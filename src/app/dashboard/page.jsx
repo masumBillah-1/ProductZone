@@ -6,6 +6,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useAuth } from '@/contexts/AuthContext';
 import ProtectedRoute from '@/components/ProtectedRoute';
+import Logo from '@/components/Logo';
 import toast from 'react-hot-toast';
 
 export default function DashboardPage() {
@@ -41,14 +42,9 @@ function DashboardContent() {
     <div className="flex h-screen overflow-hidden bg-background-light dark:bg-background-dark">
       {/* Sidebar Navigation */}
       <aside className="w-64 bg-[#1a2229] text-white flex flex-col shrink-0 border-r border-slate-800">
-        <a href="/" className="p-6 flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer">
-          <div className="size-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="material-symbols-outlined text-white">shield_person</span>
-          </div>
-          <div>
-            <h1 className="font-bold text-lg leading-none">ProductZone</h1>
-            <p className="text-xs text-slate-400 mt-1">Management Portal</p>
-          </div>
+        <a href="/" className="p-6 hover:opacity-80 transition-opacity cursor-pointer">
+          <Logo className="w-12 h-12" textClassName="text-xl" />
+          <p className="text-xs text-slate-400 mt-2">Management Portal</p>
         </a>
 
         <nav className="flex-1 px-4 space-y-1 mt-4">

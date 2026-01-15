@@ -7,6 +7,8 @@ import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '@/lib/firebase';
 import { useAuth } from '@/contexts/AuthContext';
 import ThemeToggle from '@/components/ThemeToggle';
+import Logo from '@/components/Logo';
+import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 
 export default function LoginPage() {
@@ -83,11 +85,8 @@ export default function LoginPage() {
         <div className="absolute bottom-0 left-0 -ml-24 -mb-24 size-[400px] bg-white/5 rounded-full blur-3xl"></div>
         
         <div className="relative z-10 max-w-md text-white">
-          <Link href="/" className="flex items-center gap-2 mb-6 w-fit hover:opacity-80 transition-opacity">
-            <div className="p-1.5 bg-white/10 backdrop-blur-md rounded-lg text-white">
-              <span className="material-symbols-outlined text-2xl">layers</span>
-            </div>
-            <h2 className="text-lg font-bold tracking-tight">ProductZone</h2>
+          <Link href="/" className="mb-6 w-fit hover:opacity-80 transition-opacity block">
+            <Logo className="w-14 h-14" textClassName="text-2xl" />
           </Link>
           
           <div className="space-y-4">
@@ -131,30 +130,48 @@ export default function LoginPage() {
 
       {/* Right Side - Login Form */}
       <section className="w-full lg:w-1/2 flex items-center justify-center p-4 md:p-6 bg-background-light dark:bg-background-dark">
-        <div className="w-full max-w-[380px]">
+        <motion.div 
+          className="w-full max-w-[380px]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           {/* Mobile Logo */}
-          <Link href="/" className="lg:hidden flex items-center gap-2 mb-6 justify-center hover:opacity-80 transition-opacity">
-            <div className="p-1.5 bg-primary rounded-lg text-white">
-              <span className="material-symbols-outlined text-xl">layers</span>
-            </div>
-            <h2 className="text-lg font-bold tracking-tight text-primary dark:text-white">ProductZone</h2>
+          <Link href="/" className="lg:hidden mb-6 justify-center hover:opacity-80 transition-opacity block">
+            <Logo className="w-12 h-12 mx-auto" textClassName="text-xl" />
           </Link>
 
           {/* Header */}
-          <div className="mb-6 text-center lg:text-left">
+          <motion.div 
+            className="mb-6 text-center lg:text-left"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
             <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-1">Welcome Back</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">Please sign in to your account.</p>
-          </div>
+          </motion.div>
 
           {/* Error Message */}
           {error && (
-            <div className="p-3 bg-rose-50 dark:bg-rose-500/10 border border-rose-200 dark:border-rose-500/20 rounded-lg">
+            <motion.div 
+              className="p-3 bg-rose-50 dark:bg-rose-500/10 border border-rose-200 dark:border-rose-500/20 rounded-lg"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+            >
               <p className="text-xs text-rose-600 dark:text-rose-400">{error}</p>
-            </div>
+            </motion.div>
           )}
 
           {/* Login Form */}
-          <form className="space-y-4" onSubmit={handleEmailLogin}>
+          <motion.form 
+            className="space-y-4" 
+            onSubmit={handleEmailLogin}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
             {/* Email Field */}
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-700 dark:text-slate-300" htmlFor="email">
@@ -221,13 +238,15 @@ export default function LoginPage() {
             </div>
 
             {/* Submit Button */}
-            <button
+            <motion.button
               className="w-full bg-primary text-white py-2.5 rounded-lg font-bold text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all shadow-md active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
               type="submit"
               disabled={emailLoading || googleLoading}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               {emailLoading ? 'Signing In...' : 'Sign In'}
-            </button>
+            </motion.button>
 
             {/* Divider */}
             <div className="relative my-4">
@@ -242,11 +261,13 @@ export default function LoginPage() {
             </div>
 
             {/* Social Login Button */}
-            <button
+            <motion.button
               className="w-full flex items-center justify-center gap-2 py-2.5 px-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all font-semibold text-xs disabled:opacity-50 disabled:cursor-not-allowed"
               type="button"
               onClick={handleGoogleLogin}
               disabled={emailLoading || googleLoading}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
@@ -255,19 +276,24 @@ export default function LoginPage() {
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
               </svg>
               {googleLoading ? 'Signing in...' : 'Sign in with Google'}
-            </button>
-          </form>
+            </motion.button>
+          </motion.form>
 
           {/* Sign Up Link */}
-          <div className="mt-6 text-center">
+          <motion.div 
+            className="mt-6 text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
             <p className="text-xs text-slate-500">
               Don't have an account?{' '}
               <Link className="text-primary font-bold hover:underline ml-1 transition-all" href="/register">
                 Sign Up
               </Link>
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     </main>
   );
