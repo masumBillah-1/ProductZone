@@ -2,8 +2,15 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { signOut } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
+import { useAuth } from '@/contexts/AuthContext';
+import toast from 'react-hot-toast';
 
 export default function Navbar() {
+  const { user } = useAuth();
+  const router = useRouter();
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
@@ -35,6 +42,17 @@ export default function Navbar() {
     console.log('HTML classes:', document.documentElement.className);
   };
 
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      toast.success('Successfully logged out!');
+      router.push('/');
+    } catch (error) {
+      console.error('Logout error:', error);
+      toast.error('Failed to logout. Please try again.');
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
       <div className="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
@@ -46,7 +64,7 @@ export default function Navbar() {
         </Link>
         <nav className="hidden md:flex items-center gap-10">
           <a className="text-sm font-semibold hover:text-primary transition-colors" href="/#home">Home</a>
-          <a className="text-sm font-semibold hover:text-primary transition-colors" href="/#services">Items</a>
+          <a className="text-sm font-semibold hover:text-primary transition-colors" href="/items">Items</a>
           <a className="text-sm font-semibold hover:text-primary transition-colors" href="/#about">About</a>
         </nav>
         <div className="flex items-center gap-4">
@@ -67,12 +85,28 @@ export default function Navbar() {
             )}
           </button>
 
-          <Link href="/register" className="hidden sm:block text-sm font-bold text-primary dark:text-white px-4">
-            Sign Up
-          </Link>
-          <Link href="/login" className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-all shadow-md">
-            Login
-          </Link>
+          {user ? (
+            <>
+              <Link href="/dashboard" className="hidden sm:block text-sm font-bold text-primary dark:text-white px-4">
+                Dashboard
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="bg-rose-500 text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-all shadow-md"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link href="/register" className="hidden sm:block text-sm font-bold text-primary dark:text-white px-4">
+                Sign Up
+              </Link>
+              <Link href="/login" className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-all shadow-md">
+                Login
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>

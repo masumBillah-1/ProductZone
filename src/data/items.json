@@ -1,0 +1,75 @@
+[
+  {
+    "id": "1",
+    "name": "Standard Pro Kit",
+    "description": "Complete set of professional UI components and templates optimized for startup websites.",
+    "price": 49,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviews": 128,
+    "badge": "NEW",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAopCeS2H_ZSNhdg3kpplbGtCekZFjY9fUrRG0sWTjOCn-zFYRnrI-wpuUAVCbX_5vCnHDg_0ZEeHaPzf3FY08vMjBPfJRgVmI23oatgKI9DwEnblBOUuyO77yTDY-VvPiP4P7WO8YpBvdwxW-exsjeI9NwqsiwnjROXQn6bfyVyblkFxkGF0wvur0fy1Q8ZhyEGPwgbRqPYg3Xjmo59UA5f2HYVGy8y_BO3S3nHWlmqkGZMK0BKpiUvwRE8eqwcXJvTjZdW2XRNW76",
+    "category": "UI Kit"
+  },
+  {
+    "id": "2",
+    "name": "Analytics Engine",
+    "description": "Enterprise-grade tracking with advanced machine learning insights for deep data analysis.",
+    "price": 99,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviews": 420,
+    "badge": "BEST SELLER",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBwGfsYObg4sGEryZr6zCpD5CebcOh5ksRNj7nQe207DK-GiUczHCsh53NGseSZ51BT5DlbT9zkfkLRFROtz0GGelMgbWuKaOLm6HHXMLknvheaxae50IxO7IF6GkOE8x2_EzD9rT626UJVtepXP8ouxEnKLUNrE9hu7iyGaH22gq79KGpj5kW1YYnYCM38gCVYegToePmSz_kQZEhrCXFs6p7WwApC_LiStIXQvqx2kXXeIzBIHAoKgPT-YDrkzUxKUWpMn1641X5s",
+    "category": "Analytics"
+  },
+  {
+    "id": "3",
+    "name": "Team Workspace",
+    "description": "Collaborative digital environment designed specifically for remote-first creative teams.",
+    "price": 29,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviews": 89,
+    "badge": null,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCiHEpCqQAQX3S1HXYfS6SdDKSoyTxBjsiAe-OnXzllsnyFOpUsPQsUan4ge-gvylHl-i2_eZajmrFBk20cYZkmDefBCv1auUdiLEaTX71oNiBgc92Dz6zca8ASj_TIznzYWgS4vTIFKpmSsG3deRkOmLqZnXpxw5rRn4y53Mugq-b_u2EV3hgKd8oWIrFa3S_UfXbgdxcKAtEJHTOQfctYPWYg2tBK9OQiEm6AExbzv75auw-e-Sgp8H5WQGkZiLXMGmkpaSdcJVB9",
+    "category": "Collaboration"
+  },
+  {
+    "id": "4",
+    "name": "Design System",
+    "description": "Extensive library of tokens, components, and design patterns for large-scale enterprise applications.",
+    "price": 149,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviews": 62,
+    "badge": "NEW",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCV88dEB8wP9YYqXx3l-wD5Qy3OeMxc7Wdm8K9f9M4q0xHIce0LilZ4T6es6CKhnD-3xRxX-jFuvz4e45zEg7yI780CJBYESyn31kq8cn0XVrZuSmeFZqjB_CRotwDYNZnRE3sUYucOYlkUSHai1tetA2gKI2PXdClushZ14Y_yTxdQc5ir2YJMgFxo5EF3vd3kIDYZPdSF-HnFmhrkYm_yiZ2UVdhYP7DnxxgR5Se-EmpDkA8ex5v6WWKp-JdU9f46IrzSKFjcwyDI",
+    "category": "Design"
+  },
+  {
+    "id": "5",
+    "name": "Cloud Suite",
+    "description": "Secure, encrypted cloud storage with built-in version control and real-time collaboration tools.",
+    "price": 15,
+    "billing": "monthly",
+    "currency": "USD",
+    "rating": 4.6,
+    "reviews": 210,
+    "badge": null,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDVtfZXhODVZgLsK22TjNOhWDfTpW2OVSYsPkqW5lRc84wEw_TNwAFFeF0de-bsNLv6phwM06yVVSoS7IhnEOtsrSDBJYh6S7ZIZu1asRzYIlUasoyE-x19GXQXtAILW8_VROgqF6BsnzWyRD1F9moMD3CDaGi0n2ccNIp3rA14Zr3rrrYsE6SbjDsOly5_KCyfC8CROh_SgHZflr2_j1XIu8aTh7Vla5s3Aycj10RQ3ZlTeOdmMa_-7RXmYeDh_qolT-YXlnhNlTQV",
+    "category": "Cloud"
+  },
+  {
+    "id": "6",
+    "name": "SEO Master",
+    "description": "Advanced SEO monitoring and recommendation engine to boost your website search rankings.",
+    "price": 79,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviews": 324,
+    "badge": "BEST SELLER",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDK-3fLjo20YYEoDXIUQ_xSifr2FbWzpPWtBi9qeVD4n5dSxhf9b0se28j4HwZKeqs5GFCQGVP2kseI6su9nxZP8uhwZXAHVGbf55eCToZBWLhfWSjCuMVgxsGG-ijrPQWqHhwNHCDFzukKzAHyaBr31RyC3hblq5hHe0VeRv-Of4c0hBb7A_wB57aLIQNCeQ5hQ3-lk2ZT5VT_iGhvMl77PHn95-bXK9buLIBAwV4A9ytxZ8HxSMCetRqhYFbGjjANmp_h04fTFFIt",
+    "category": "Marketing"
+  }
+]
