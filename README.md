@@ -65,24 +65,24 @@ productzone/
 │   │   │   └── [id]/          # Dynamic product details
 │   │   ├── login/             # Login page
 │   │   ├── register/          # Registration page
-│   │   ├── layout.js          # Root layout with providers
-│   │   ├── page.js            # Landing page
+│   │   ├── layout.jsx          # Root layout with providers
+│   │   ├── page.jsx            # Landing page
 │   │   └── globals.css        # Global styles
 │   ├── components/
-│   │   ├── Navbar.js          # Navigation with auth state
-│   │   ├── Hero.js            # Landing hero section
-│   │   ├── Features.js        # Features showcase
-│   │   ├── About.js           # About section
-│   │   ├── Services.js        # Services section
-│   │   ├── Testimonials.js    # Customer testimonials
-│   │   ├── Newsletter.js      # Newsletter signup
-│   │   ├── Footer.js          # Footer component
-│   │   ├── ThemeToggle.js     # Dark/light mode toggle
-│   │   └── ProtectedRoute.js  # Route protection HOC
+│   │   ├── Navbar.jsx          # Navigation with auth state
+│   │   ├── Hero.jsx            # Landing hero section
+│   │   ├── Features.jsx        # Features showcase
+│   │   ├── About.jsx           # About section
+│   │   ├── Services.jsx        # Services section
+│   │   ├── Testimonials.jsx    # Customer testimonials
+│   │   ├── Newsletter.jsx      # Newsletter signup
+│   │   ├── Footer.jsx          # Footer component
+│   │   ├── ThemeToggle.jsx     # Dark/light mode toggle
+│   │   └── ProtectedRoute.jsx  # Route protection HOC
 │   ├── contexts/
-│   │   └── AuthContext.js     # Global auth state management
+│   │   └── AuthContext.jsx     # Global auth state management
 │   ├── lib/
-│   │   └── firebase.js        # Firebase configuration
+│   │   └── firebase.jsx        # Firebase configuration
 │   └── data/
 │       └── items.json         # Product catalog data
 ├── public/                     # Static assets
@@ -105,7 +105,7 @@ productzone/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/productzone.git
+git clone https://github.com/masumBillah-1/ProductZone.git
 cd productzone
 ```
 
@@ -262,7 +262,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/masumBillah-1)
+- GitHub: [@masumBillah-1](https://github.com/masumBillah-1)
 - Email: masumak203@gmail.com
 
 ## 🙏 Acknowledgments
@@ -275,7 +275,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Support
 
-For support, email your.email@example.com or open an issue in the GitHub repository.
+For support, email masumak203@gmail.com or open an issue in the GitHub repository.
 
 ---
 
